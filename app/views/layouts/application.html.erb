@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <meta charset="utf-8"/>
+  <title>gochina</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="" name="description"/>
+  <meta content="" name="author"/>
+  
+  <!-- BEGIN GLOBAL MANDATORY STYLES -->
+  <%= stylesheet_link_tag    'global/font-awesome.min', media: 'all'%>
+  
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+  <%= stylesheet_link_tag    'global/font-awesome.min', media: 'all'%>
+  <%= stylesheet_link_tag    'global/bootstrap.min', media: 'all'%>
+  <%= stylesheet_link_tag    'global/uniform.default', media: 'all'%>
+  <%= stylesheet_link_tag    'global/bootstrap-switch.min', media: 'all'%>
+  <!-- END GLOBAL MANDATORY STYLES -->
+  
+  <!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
+  <%= stylesheet_link_tag    'global/jquery.gritter', media: 'all'%>
+  <%= stylesheet_link_tag    'global/daterangepicker-bs3', media: 'all'%>
+  <%= stylesheet_link_tag    'global/fullcalendar', media: 'all'%>
+  <%= stylesheet_link_tag    'global/jqvmap', media: 'all'%>
+  <!-- END PAGE LEVEL PLUGIN STYLES -->
+  
+  <!-- BEGIN PAGE STYLES -->
+  <%= stylesheet_link_tag    'global/tasks', media: 'all'%>
+  <!-- END PAGE STYLES -->
+  
+  <!-- BEGIN THEME STYLES -->
+  <%= stylesheet_link_tag    'global/components', media: 'all'%>
+  <%= stylesheet_link_tag    'global/plugins', media: 'all'%>
+  <%= stylesheet_link_tag    'global/layout', media: 'all'%>
+  <%= stylesheet_link_tag    'global/yellow-crusta', media: 'all'%>
+  <%= stylesheet_link_tag    'global/custom', media: 'all'%>
+  
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  
+  
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="page-md">
+
+  <!-- Page header -->
+  <%= render 'layouts/header' %>
+  
+  
+  
+          <!-- BEGIN PAGE CONTAINER -->
+<div class="page-container">
+	<!-- BEGIN PAGE CONTENT -->
+	<div class="page-content">
+		
+		
+        
+          		<%= yield %>
+       
+          
+	</div>
+	<!-- END PAGE CONTENT -->
+</div>
+<!-- END PAGE CONTAINER -->
+       
+      <!-- Page footer -->
+      <%= render 'layouts/footer' %>
+ 
+  <!-- END CONTAINER -->    
+      
+  <%= javascript_include_tag 'global/jquery.min' %>
+  <%= javascript_include_tag 'global/jquery-migrate.min' %>
+  <!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+  <%= javascript_include_tag 'global/jquery-ui.min' %>
+  <%= javascript_include_tag 'global/bootstrap.min' %>
+  <%= javascript_include_tag 'global/bootstrap-hover-dropdown.min' %>
+  <%= javascript_include_tag 'global/jquery.slimscroll.min' %>
+  <%= javascript_include_tag 'global/jquery.blockui.min' %>
+  <%= javascript_include_tag 'global/jquery.cokie.min' %>
+  <%= javascript_include_tag 'global/jquery.uniform.min' %>
+ 
+  <!-- END CORE PLUGINS -->
+  <!-- BEGIN PAGE LEVEL PLUGINS -->
+  <%= javascript_include_tag 'global/jquery.vmap' %>
+  <%= javascript_include_tag 'global/jquery.vmap.russia' %>
+  <%= javascript_include_tag 'global/jquery.vmap.world' %>
+  <%= javascript_include_tag 'global/jquery.vmap.europe' %>
+  <%= javascript_include_tag 'global/jquery.vmap.germany' %>
+  <%= javascript_include_tag 'global/jquery.vmap.usa' %>
+  <%= javascript_include_tag 'global/jquery.vmap.sampledata' %>
+  <!-- IMPORTANT! fullcalendar depends on jquery-ui.min.js for drag & drop support -->
+  <%= javascript_include_tag 'global/morris.min' %>
+  <%= javascript_include_tag 'global/raphael-min' %>
+  <%= javascript_include_tag 'global/jquery.sparkline.min' %>
+  <!-- END PAGE LEVEL PLUGINS -->
+  <!-- BEGIN PAGE LEVEL SCRIPTS -->
+  <%= javascript_include_tag 'global/metronic' %>
+  <%= javascript_include_tag 'global/layout' %>
+  <%= javascript_include_tag 'global/quick-sidebar' %>
+  <%= javascript_include_tag 'global/demo' %>
+  <%= javascript_include_tag 'global/index3' %>
+  <%= javascript_include_tag 'global/tasks' %>
+  <!-- END PAGE LEVEL SCRIPTS -->
+  <script>
+    jQuery(document).ready(function() {    
+       Metronic.init(); // init metronic core componets
+       Layout.init(); // init layout
+       Demo.init(); // init demo(theme settings page)
+       QuickSidebar.init(); // init quick sidebar
+       Index.init(); // init index page
+       Tasks.initDashboardWidget(); // init tash dashboard widget
+    });
+  </script>
+</body>
+</html>
+
+
+
+
